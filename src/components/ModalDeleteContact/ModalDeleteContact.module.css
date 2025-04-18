@@ -1,0 +1,72 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeInScale 250ms ease-in-out;
+  text-align: center;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.text {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 24px;
+}
+
+.confirm,
+.cancel {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 250ms linear, transform 250ms linear;
+}
+
+.confirm {
+  background-color: #ff4d4f;
+  color: #ffffff;
+}
+
+.confirm:hover {
+  background-color: #e04345;
+  transform: scale(1.05);
+}
+
+.cancel {
+  background-color: #f0f0f0;
+  color: #333333;
+}
+
+.cancel:hover {
+  background-color: #dddddd;
+  transform: scale(1.05);
+}

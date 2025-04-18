@@ -17,8 +17,8 @@ export default function Navigation() {
         Home
       </NavLink>
       {isLoggedIn && (
-        <NavLink className={getLinkStyles} to="/tasks">
-          Tasks
+        <NavLink className={getLinkStyles} to="/contacts">
+          Contacts
         </NavLink>
       )}
     </nav>
